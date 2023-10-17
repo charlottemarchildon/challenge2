@@ -1,0 +1,374 @@
+/*
+Typography
+*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/*
+Declaring root variables.
+*/
+:root {
+    --background-yellow: #fffeed;
+    --dark-brown: #733c0b;
+    --darker-brown: #472506;
+    --span-colour: #e03d0b;
+    --pink: #ffb9a3;
+    --footer-colour: #fc8058;
+    --title-font: 'Bebas Neue', sans-serif;
+    --paragraph-font: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*
+Assigning a border-box to all page content. Giving a 0 margin and 0 padding to all elements.
+*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+Assigning the background colour to a yellowish-white.
+Body made to be 100%.
+*/
+body {
+    height: 100%;
+    background-color: var(--background-yellow);
+}
+
+/*
+Font assigned for header.
+Height made to fit 100% of the viewport.
+*/
+.header {
+    height: 100vh;
+    font-family: var(--paragraph-font);
+}
+
+/*
+Font and font colour assigned for header h1.
+Text centered and padding and margins applied.
+*/
+.header h1 {
+    text-align: center;
+    align-items: center;
+    font-family: var(--title-font);
+    font-size: 120px;
+    color: var(--dark-brown);
+    margin-bottom: 60px;
+    padding: 15px;
+}
+
+/*
+Changing colour for the span tag.
+*/
+.span {
+    color: var(--span-colour);
+}
+
+/*
+Centered image. 
+Made image 250px by 250px.
+Applied automated margins to the left and right and 60px at the bottom.
+*/
+.avatar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+    height: 300px;
+    width: 300px;
+}
+
+/*
+Centered nav and added a background colour.
+Made height of nav bar 17% of page.
+*/
+.nav {
+    text-align: center;
+    background-color: var(--pink);
+    height: 17%;
+}
+
+/*
+Added margins to space out between items as well as top and bottom.
+Displayed as inline-block and changed font size as well as centered text.
+*/
+.nav ul li {
+    display: inline-block;
+    margin: 40px 110px;
+    font-size: 34px;
+    text-align: center;
+}
+
+/*
+Removed text decoration from list item links.
+Changed text colour.
+Added padding around links.
+*/
+.nav ul li a,
+.footer ul li a {
+    text-decoration: none;
+    color: var(--darker-brown);
+    padding: 5px;
+}
+
+/*
+Changed background colour of links on hover and rounded borders.
+*/
+.nav ul li a:hover {
+    background-color: #c7996f;
+    border-radius: 20px;
+}
+
+/*
+Making section 100% of the viewport.
+*/
+#about-me {
+    height: 100vh;
+}
+
+/*
+Added title font, size and colour. 
+Centered text and added padding and margins.
+*/
+#about-me h2,
+#contact h2 {
+    font-family: var(--title-font);
+    font-size: 64px;
+    color: var(--dark-brown);
+    text-align: center;
+    align-items: center;
+    padding-top: 100px;
+    margin: 80px 80px;
+}
+
+/*
+Added font family, size and colour.
+Added margins and centered text.
+*/
+#about-me p,
+#contact p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 34px;
+    color: var(--dark-brown);
+    text-align: center;
+    margin: 100px 80px;
+}
+
+/*
+Setting height of the projects section to 100% of the viewport.
+*/
+#project-wrapper {
+    height: 100vh;
+}
+
+/*
+Assigning font family size and colour the h2.
+Centering content and adding padding and margins.
+*/
+#projects h2 {
+    font-family: var(--title-font);
+    font-size: 64px;
+    color: var(--dark-brown);
+    text-align: center;
+    align-items: center;
+    padding-top: 30px;
+    margin: 40px 80px;
+}
+
+/*
+Floating div to the left and setting position to relative.
+Added margin.
+*/
+.first-project {
+    position: relative;
+    float: left;
+    margin-left: 60px;
+}
+
+/*
+Setting .first-project img to display as block with automated margins on the left and right. 
+60px margins added to bottom of image.
+Image is made to be 500x500px.
+*/
+.first-project img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+    height: 500px;
+    width: 500px;
+}
+
+/*
+Centered h3 and assigned a font family, size and added shadow to the text.
+*/
+.first-project h3 {
+    text-align: center;
+    font-family: var(--title-font);
+    font-size: 30px;
+    text-shadow: 3px 3px 5px var(--dark-brown);
+}
+
+/*
+Made remaining 4 projects float to the right, beside the .first-project.
+Width of each div is 25% of the screen and height is 150px.
+Content is displayed as flex and centered within the parent div.
+Margin of 40px all around each item.
+*/
+.second-project,
+.third-project,
+.fourth-project,
+.fifth-project {
+    position: relative;
+    float: right;
+    width: 25%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 40px;
+}
+
+/*
+Each project image besides the first is 150x150px.
+Display is set to flex and centered within the parent div.
+*/
+.second-project img,
+.third-project img,
+.fourth-project img,
+.fifth-project img {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+Aligned each h3 to the center of their divs.
+Assigned a font, spacing between letters and applied a shadow to the text.
+Margin of 20px applied to space between the text and image.
+*/
+.second-project h3,
+.third-project h3,
+.fourth-project h3,
+.fifth-project h3 {
+    text-align: center;
+    font-family: var(--title-font);
+    margin-right: 20px;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 5px var(--dark-brown);
+}
+
+/*
+Changed background colour on hover with a 30% opacity to it.
+Applied padding surrounding the text.
+Background colour border is rounded by 20px.
+Text colour is white with a black shadow.
+*/
+.first-project:hover,
+.second-project:hover,
+.third-project:hover,
+.fourth-project:hover,
+.fifth-project:hover {
+    background-color: var(--dark-brown);
+    padding: 10px;
+    opacity: 30%;
+    border-radius: 20px;
+    color: white;
+    text-shadow: 3px 3px 5px black;
+}
+
+/*
+Assigned clear:both to make section float beneath the floated items above.
+Height of the section is 100% of the viewport.
+Text aligned to the center.
+*/
+#contact {
+    clear: both;
+    height: 100vh;
+    text-align: center;
+}
+
+/*
+Assigned a font to the list items in the form.
+Margin of 10px applied to the bottom of each list item.
+*/
+#contact form ul li {
+    font-family: var(--paragraph-font);
+    margin-bottom: 10px;
+}
+
+/*
+Applied a background colour and font colour.
+Padding of 40px applied to top and bottom of form content.
+*/
+.form {
+    background-color: var(--pink);
+    color: var(--darker-brown);
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/*
+Changed textarea font colour to --dark-brown.
+*/
+textarea {
+    color: var(--dark-brown);
+}
+
+/*
+Changed font size and colour of Submit button text.
+Applied a padding around the text and rounded the border by 20px.
+*/
+input[type=submit] {
+    color: var(--darker-brown);
+    font-size: 15px;
+    padding: 7px;
+    border-radius: 20px;
+}
+
+/*
+Made text colour and cursor change on hover.
+*/
+input[type=submit]:hover {
+    color: var(--dark-brown);
+    cursor: pointer;
+}
+
+/*
+Changed background colour of the footer.
+Aligned items to center and applied a font family.
+*/
+.footer {
+    background-color: var(--footer-colour);
+    align-items: center;
+    text-align: center;
+    font-family: var(--paragraph-font);
+}
+
+/*
+Made footer list items display as inline-block.
+Applied a margin all around to the list items and changed the font size and colour.
+*/
+.footer ul li {
+    display: inline-block;
+    margin: 20px 80px;
+    font-size: 20px;
+    color: var(--darker-brown);
+}
+
+/*
+Changed text colour of the list item links on hover.
+*/
+.footer ul li a:hover {
+    color: white;
+}
+
+/*
+Changed font for the p element in the .footer item list.
+*/
+.footer ul li p {
+    font-family: var(--title-font);
+}
